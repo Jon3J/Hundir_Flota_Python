@@ -55,10 +55,7 @@ El clásico juego de hundir la flota. Se basa en echar una partida contra la má
     visualizarTableroJugador(tableroJugador, nombre_jugador) #Después de que nuestro rival ataque, volvemos a imprimir el tablero del jugador pero actualizado.
 
 
-
-
-
 ## Screenshots
 
-![App Screenshot](https://play-lh.googleusercontent.com/zEy6rEpair5eEq9AwR9miRkySqAvZoEeYkyV_hAcs7nxPw_owzu2vE0KhhB873ltJWk=w526-h296-rw)
+![App Screenshot](https://images.playground.com/e1e9fe3d00794e3ba48c3e757fd18c38.jpeg)
 
