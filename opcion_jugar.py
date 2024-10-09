@@ -52,14 +52,17 @@ def hundir_flota(nombre_jugador):
 
         #Turno del rival
         print("Turno del rival")
-        fila_ataque_rival = random.randint(0,DIMENSIONES_TABLERO-1)
-        columna_ataque_rival = random.randint(0,DIMENSIONES_TABLERO-1)
-        if ataque_rival(tableroJugador,fila_ataque_rival,columna_ataque_rival):
-            if barco_destruido(tableroJugador, barcosJugador):
-                print("¡El rival ha destruido uno de tus barcos!")
-            if len(barcosJugador) == 0:
-                print("El rival ha destruido todos tus barcos. HAS PERDIDO!")
-                mostrar_imagen('imagenes/derrota.png')
-                print()
-                return
+        while True: #El bucle ayudará a nuestro rival a realizar varios ataques en caso de que este acierte.
+            fila_ataque_rival = random.randint(0,DIMENSIONES_TABLERO-1)
+            columna_ataque_rival = random.randint(0,DIMENSIONES_TABLERO-1)
+            if ataque_rival(tableroJugador,fila_ataque_rival,columna_ataque_rival):
+                if barco_destruido(tableroJugador, barcosJugador):
+                    print("¡El rival ha destruido uno de tus barcos!")
+                if len(barcosJugador) == 0:
+                    print("El rival ha destruido todos tus barcos. HAS PERDIDO!")
+                    mostrar_imagen('imagenes/derrota.png')
+                    print()
+                    return
+            else:
+                break #En caso de que el rival, falle el ataque saldrá del bucle
     visualizarTableroJugador(tableroJugador, nombre_jugador) #Después de que nuestro rival ataque, volvemos a imprimir el tablero del jugador pero actualizado.
