@@ -52,7 +52,7 @@ def hundir_flota(nombre_jugador):
                     print("¡Has destruido un barco de tu rival!")
                 if len(barcosRival) == 0:
                     print(f"El jugador: {nombre_jugador} ¡HA GANADO LA PARTIDA!")
-                    aniadirSonido('sonidos/youwin.wav')
+                    aniadirSonido('sonidos/victory.wav')
                     mostrar_imagen('imagenes/win.png')
                     print()
                     return
