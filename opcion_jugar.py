@@ -17,7 +17,7 @@ def aniadirSonido(sonido_path):
     sonido = pygame.mixer.Sound(sonido_path) #Cargamos un archivo de sonido
     sonido.play() #Lo reproduce
     sonido.set_volume(0.3) #Establece el nivel de volumen
-    sonido.stop() #Para el sonido
+    pygame.time.wait(int(sonido.get_length()*1000)) #Hace una espera de la duración del sonido
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #FUNCIÓN PRINCIPAL DE NUESTRO JUEGO
 #----------------------------------
