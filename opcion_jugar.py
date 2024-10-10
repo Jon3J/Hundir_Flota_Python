@@ -10,6 +10,14 @@ def mostrar_imagen(imagen_path):
     pygame.display.flip()  #Se actualiza la pantalla
     time.sleep(10)  # Se hace una espera 10 segundos
     pygame.quit()  # Se cierra la ventana pygame
+    
+def aniadirSonido(sonido_path):
+    pygame.init() 
+    pygame.mixer.init()
+    sonido = pygame.mixer.Sound(sonido_path) #Cargamos un archivo de sonido
+    sonido.play() #Lo reproduce
+    sonido.set_volume(0.3) #Establece el nivel de volumen
+    sonido.stop() #Para el sonido
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #FUNCIÓN PRINCIPAL DE NUESTRO JUEGO
 #----------------------------------
@@ -45,6 +53,7 @@ def hundir_flota(nombre_jugador):
                 if len(barcosRival) == 0:
                     print(f"El jugador: {nombre_jugador} ¡HA GANADO LA PARTIDA!")
                     mostrar_imagen('imagenes/win.png')
+                    aniadirSonido('sonidos/youwin.wav')
                     print()
                     return
             else: #En caso contrario, si tocado_barco = False, rompemos el bucle.
@@ -61,6 +70,7 @@ def hundir_flota(nombre_jugador):
                 if len(barcosJugador) == 0:
                     print("El rival ha destruido todos tus barcos. HAS PERDIDO!")
                     mostrar_imagen('imagenes/derrota.png')
+                    aniadirSonido('sonidos/youlose.wav')
                     print()
                     return
             else:
