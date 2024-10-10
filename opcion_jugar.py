@@ -52,8 +52,8 @@ def hundir_flota(nombre_jugador):
                     print("¡Has destruido un barco de tu rival!")
                 if len(barcosRival) == 0:
                     print(f"El jugador: {nombre_jugador} ¡HA GANADO LA PARTIDA!")
-                    mostrar_imagen('imagenes/win.png')
                     aniadirSonido('sonidos/youwin.wav')
+                    mostrar_imagen('imagenes/win.png')
                     print()
                     return
             else: #En caso contrario, si tocado_barco = False, rompemos el bucle.
@@ -69,8 +69,8 @@ def hundir_flota(nombre_jugador):
                     print("¡El rival ha destruido uno de tus barcos!")
                 if len(barcosJugador) == 0:
                     print("El rival ha destruido todos tus barcos. HAS PERDIDO!")
-                    mostrar_imagen('imagenes/derrota.png')
                     aniadirSonido('sonidos/youlose.wav')
+                    mostrar_imagen('imagenes/derrota.png')
                     print()
                     return
             else:
