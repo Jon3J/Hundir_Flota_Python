@@ -4,12 +4,12 @@ from funciones import *
 from tablero import *
 
 def mostrar_imagen(imagen_path):
-    pantalla = pygame.display.set_mode((1254, 836))  # Cambia el tamaño según necesites
+    pantalla = pygame.display.set_mode((1254, 836))  #Se cambia el tamaño de la ventana
     imagen = pygame.image.load(imagen_path)
     pantalla.blit(imagen, (0, 0))  # Muestra la imagen en la posición (0, 0)
-    pygame.display.flip()  # Actualiza la pantalla
-    time.sleep(10)  # Espera 10 segundos
-    pygame.quit()  # Cierra Pygame
+    pygame.display.flip()  #Se actualiza la pantalla
+    time.sleep(10)  # Se hace una espera 10 segundos
+    pygame.quit()  # Se cierra la ventana pygame
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #FUNCIÓN PRINCIPAL DE NUESTRO JUEGO
 #----------------------------------
